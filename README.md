@@ -46,19 +46,57 @@ As features são:
 - **oldpeak** - ST depression induced by exercise relative to rest
 - **slope** - the slope of the peak exercise ST segment (1 = upsloping; 2 = flat; 3 = downsloping)
 - **ca** - number of major vessels (0-3) colored by flourosopy
-- **thal**- 3 = normal; 6 = fixed defect; 7 = reversable defect
+- **thal** - 3 = normal; 6 = fixed defect; 7 = reversable defect
 
 
 ## Modelagem
 O objetivo deste projeto não está na performance do classificador, mas sim em sua interpretação e em explicar suas decisões. Ainda assim foram realizados devidas separações do dataset em conjuntos de treino, validação e teste, e também aplicada as métricas de avaliação. Os modelos foram o Random Forest do scikit-learn e uma rede neural artificial do Keras.
 
 ## Resultados
+Resultados obtidos com a aplicação de cada técnica de XAI. No notebook há mais exemplos, explicações e comentários.
 
 ### Feature Importance
+<p align="center">
+  <img src="reports/figures/feature_importance_eli5.png?raw=true" alt="Feature Importance"/>
+</p>
+
 ### LIME
+<p align="center">
+  <img src="reports/figures/lime.png?raw=true" alt="LIME"/>
+</p>
+
 ### Anchor
+<p align="center">
+  <img src="reports/figures/anchor.png?raw=true" alt="Anchor"/>
+</p>
+
 ### SHAP
+Global:<br />
+<p align="center">
+  <img src="reports/figures/shap_global.png?raw=true" alt="SHAP Global"/>
+</p>
+
+Local: <br />
+<p align="center">
+  <img src="reports/figures/shap_local.png?raw=true" alt="SHAP Local"/>
+</p>
+
 ### Partial Dependence Plot (PDP)
+1 feature: <br />
+<sub>(2 exemplos)</sub> <br />
+<p align="center">
+  <img src="reports/figures/pdp_merged.png?raw=true" alt="PDP 1 variable"/>
+</p>
+
+2 features: <br />
+<p align="center">
+  <img src="reports/figures/pdp_3.png?raw=true" alt="PDF 2 variables"/>
+</p>
+
 ### Accumulated Local Effects Plot (ALE)
+
 ### Counterfactual
+<p align="center">
+  <img src="reports/figures/counterfactual.png?raw=true" alt="Counterfactual"/>
+</p>
 
